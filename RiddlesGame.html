@@ -1,0 +1,33 @@
+    <meta charset="UTF-8">
+<script type="text/javascript">
+    var riddle = prompt("Одгадайте загадку: \n Семь одежек и все без застежек.")
+    var answer = ['капуста', 'кочан капусты', 'кочан']
+    var answer_one = ['улитка', 'Улитка', 'улитк', 'Улитк']
+    var sum = 0
+    var answer_second = 'утюг'
+    answer_second = answer_second.toLowerCase()
+    var answer_third = ['звезды, месяц', 'звезды с месяцем', 'Месяц и звезды', 'Месяц, звезды', 'звезды и месяц',
+        'месяц и звезды', 'Звезды с месяцем']
+
+    if (answer.includes(riddle.toLowerCase())){
+        alert("Поздравляем, Вы выиграли!");
+    }else{
+        alert( "Вы не угадали.");
+        riddle = prompt("Одгадайте загадку: \n \n Кто на себе свой дом возит?")
+        if (answer_one.includes(riddle.toLowerCase())) sum += 1
+        riddle = prompt("Одгадайте загадку: \n \n В Полотняной стране\n" +
+            "По реке Простыне\n" +
+            "Плывет пароход \n" +
+            "То назад, то вперед,\n" +
+            "А за ним такая гладь —\n" +
+            "Ни морщинки не видать.")
+        if (answer_second.includes(riddle.toLowerCase())) sum += 1
+        riddle = prompt("Одгадайте загадку: \n \n В синем небе светляки —\n" +
+            "Не дотянешь к ним руки.\n" +
+            "А один большой светляк\n" +
+            "Изогнулся, как червяк.")
+        if (answer_third.includes(riddle.toLowerCase())) sum += 1
+        alert( "Количество правильных ответов: " + sum);
+    }
+alert("Игра окончена");
+</script>

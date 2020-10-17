@@ -1,0 +1,12 @@
+<meta charset="UTF-8">
+<script>
+   var s = 78.19;
+   var e = 91.59;
+   var conversionScale = prompt("Cколько рублей Вы желаете сконвертировать ? ");
+   e = parseFloat(e);
+   s = parseFloat(s);
+   var conversion_result = conversionScale * e;
+   alert("Результат конверттации € в ₽ :" + conversion_result.toFixed(2));
+   conversion_result = conversionScale * s;
+   alert("Результат конверттации $ в ₽ :" + conversion_result.toFixed(2));
+</script>

@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<script type="text/javascript">
+    var user_one = prompt(" Для старта игры 'Угадай число', \n введите имя первого игрока. ");
+    var user_two = prompt(" \n Введите имя второго игрока. ");
+    alert(user_one + " и " + user_two+ ", приветствую вас в игре 'Угадай число'!")
+    var answer = parseInt(Math.random() * 100);
+    var user = user_one
+    var userAnswer = prompt(user + ", угадайте число от 0 до 100: ");
+    stop = 1
+    var count = 1
+   outer: do {
+        if (count%2==0){
+        user = user_two
+    } else{
+        user = user_one
+    }
+        if (userAnswer == answer) {
+            alert("Поздравляем, "+ user +",вы угадали число! ");
+            alert("Игра закончена ...")
+            break outer
+        } else if (userAnswer > answer) {
+            alert(user + ", вы ввели слишком большое число! ");
+        } else if (userAnswer < answer) {
+            alert(user + ", вы ввели слишком маленькое число! ");
+        }
+    userAnswer = prompt(user + ", попробуйте в следующий раз. \n Ход передается следующему Игроку: Введите число от 0 до 100. \n \n Если хотите закончить игру введите 'стоп'. ");
+    stop = userAnswer
+        if (stop == 'стоп')alert("Игра закончена ...")
+        count++
+    }while (stop != 'стоп')
+</script>

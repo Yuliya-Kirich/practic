@@ -1,0 +1,11 @@
+<meta charset="UTF-8">
+  <script type="text/javascript">
+      var deposit_amount = prompt("Введите ссумму вклада ")
+      var percent = prompt("Введите процент вклада")
+
+      for (var i = 1; i<5; i++){
+          var repayment = deposit_amount * (1 + percent/100 * i)
+          deposit_amount = repayment
+          alert ("Выплата в конце срока ("+ i +" год ) cоставит: " + repayment.toFixed(1))
+      }
+  </script>
