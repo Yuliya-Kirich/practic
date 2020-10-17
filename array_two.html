@@ -1,22 +1,20 @@
     <meta charset="UTF-8">
     <script type="text/javascript">
-var numbers = [1, 12, 13, 56 ];
-numbers.push(42);
-numbers.push(48);
-numbers.push(100);
-numbers.pop();
-var m = numbers.pop();
-
+var numbers = [];
+for(var i = 0; i < 5; i++) {
+    var randomNumber = parseInt(Math.random() * 100);
+    numbers.push(randomNumber);
+}
 alert("Запомните числа и их порядок :" + numbers);
 var userAnswer = +prompt("Каким было первое число?");
-alert(numbers[0]);
+
 if (userAnswer==numbers[0]){
     alert("Все верно!");
 }else {
     alert("А вот и нет. Правильный ответ: " + numbers[0]);
 }
 userAnswer = +prompt("А последнее? ");
-alert(numbers.length-1);
+
 if (userAnswer==numbers[numbers.length-1]){
     alert("Все верно!")
 }else {
