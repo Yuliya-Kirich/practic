@@ -1,0 +1,37 @@
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        var english = [];
+        var russian = [];
+        var easyWords = [
+            ['food', 'еда'],
+            ['bike', 'велосипед'],
+            ['apple', 'яблоко'],
+            ['do', 'делать'],
+            ['mean', 'иметь в виду'],
+        ];
+        var hardWords = [
+            ['food', 'еда'],
+            ['bike', 'велосипед'],
+            ['apple', 'яблоко'],
+            ['do', 'делать'],
+            ['mean', 'иметь в виду'],
+        ];
+        
+        function askForWords(words){
+            while(words.length!=0) {
+                var i = parseInt(Math.random() * words.length);
+                var userTranslate = prompt('Как переводится слово: ' + words[i][0])
+                if (userTranslate == words[i][1]) {
+                    alert("Правильно!");
+                    //начиная с i элемента удаляется 1 элемент
+                    words.splice(i, 1);
+                } else {
+                    alert("Правильный ответ : " + words[i][1]);
+                }
+            }
+        }
+
+        askForWords(easyWords);
+        askForWords(hardWords);
+
+    </script>
