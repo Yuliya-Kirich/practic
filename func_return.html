@@ -19,10 +19,21 @@ function factorial(n) {
    }
    return result;
 }
+
+function recursiveFactorial(n){
+   if (n == 0){
+      return 1
+   }else {
+     return  recursiveFactorial(n - 1) * n;
+   }
+}
+
+var rf = recursiveFactorial(4)
 var f = factorial(5);
 var n = getRandomNumber(4);
 var m = getRandomNumber(100);
 var a = max(64, 38);
+alert(rf)
 alert(f);
 alert(n);
 alert(m);
